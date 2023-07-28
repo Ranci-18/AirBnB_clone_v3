@@ -7,6 +7,7 @@ from api.v1.views import app_views
 def get_status():
     return jsonify({"status": "OK"})
 
+
 @app_views.route('/stats', methods=['GET'])
 def get_stats():
     from models import storage
