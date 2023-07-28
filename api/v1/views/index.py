@@ -5,11 +5,13 @@ from api.v1.views import app_views
 
 @app_views.route('/status', methods=['GET'])
 def get_status():
+    """endpoint returns status OK"""
     return jsonify({"status": "OK"})
 
 
 @app_views.route('/stats', methods=['GET'])
 def get_stats():
+    """endpoint retrieves the number of each objects by type"""
     from models import storage
     from models.state import State
     from models.city import City
