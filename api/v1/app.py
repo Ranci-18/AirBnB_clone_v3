@@ -15,6 +15,7 @@ def not_found(error):
     '''returns a JSON-formatted 404 status code response'''
     return jsonify({"error": "Not found"}), 404
 
+
 @app.teardown_appcontext
 def teardown(self):
     '''closes storage'''
